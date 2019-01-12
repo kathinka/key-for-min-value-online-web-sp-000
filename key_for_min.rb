@@ -18,22 +18,13 @@ end
 end
 
 def key_for_min_value(name_hash)
-  
+  min_key = nil
+  min_value = nil
   name_hash.collect do |key, value|
-    value1 = name_hash.first[value]
-    #value1 <=> value
-    #if (-1)
-    #  value = value1
-    #  main_key = key
-    #elsif(0)
-    #  value = value1
-    #  main_key = key
-    puts " value  1 #{value1}"
-    puts "value #{value}"
-    puts key
-  end
-  puts " value  1 #{value1}"
-  puts "value #{value}"
-#  puts "main_key #{main_key}"
+if (min_value == nil || min_value > value)
+  min_value = value
+  min_key = key
 end
+end
+min_key
 end
